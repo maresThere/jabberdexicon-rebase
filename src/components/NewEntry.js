@@ -3,7 +3,7 @@ import { Button, Close, Input, Panel, PanelFooter, PanelHeader, Space, Text, Tex
 
 const NewEntry = ({onDismiss}) =>
   <div className='NewEntry' style={{maxWidth: '720px'}}>
-    <Panel theme='info' m={5}>
+    <Panel theme='info' m={4}>
       <PanelHeader
         inverted
         theme='default'
@@ -14,7 +14,7 @@ const NewEntry = ({onDismiss}) =>
       </PanelHeader>
       <Input
         label='Term'
-        name='input_example'
+        name='term'
         placeholder='Enter New Term Here'
         rounded
         type='text'
@@ -22,7 +22,7 @@ const NewEntry = ({onDismiss}) =>
       <Textarea
         placeholder='Enter Definition Here'
         label='Definition'
-        name='Definition'
+        name='definition'
         rounded
 />
       <PanelFooter theme='default'>

@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Link, NavLink, Route, Switch } from 'react-rou
 import { Button, Footer, InlineForm, NavItem, Overlay, Space, Text, Toolbar } from 'rebass'
 import Home from './Home'
 import NewEntry from './NewEntry'
+import BrowseBar from './BrowseBar'
 import theme from './theme'
-
-const ALPHA = 'abcdefghijklmnopqrstuvwxyz'.split('')
 
 class App extends Component {
   state = {
@@ -42,16 +41,7 @@ class App extends Component {
              />
           </NavItem>
         </Toolbar>
-        <section className='alpha'>
-          <ul>
-            {ALPHA.map((letter) => (
-              <li key={letter}>
-                <NavLink to={`/browse/${letter}`}>{letter}</NavLink>
-              </li>
-            ))}
-            <li><NavLink to='/browse/0'>#</NavLink></li>
-          </ul>
-        </section>
+        <BrowseBar />
 
         <Switch>
           <Route exact path='/' component={Home} />
