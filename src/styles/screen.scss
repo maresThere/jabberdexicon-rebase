@@ -8,6 +8,24 @@ html {
 }
 
 body {
-  margin: 0;
+  display: flex;
+  margin: 0 auto;
   font: $base-text-size / 1 $base-font-family;
+  max-width: 800px;
+}
+
+.alpha {
+  display: flex;
+
+  ul {
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  li {
+    list-style: none;
+  }
 }
